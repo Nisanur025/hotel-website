@@ -1,5 +1,5 @@
+#EN
 
-##EN
 # Hotel Reservation Website
 
 ## Description
@@ -8,7 +8,9 @@ This project is a **web-based** hotel management platform where users can easily
 ## Demo Video
 You can watch the demo video of the Hotel Reservation Website below:
 
-![Hotel Website Demo](https://github.com/user-attachments/assets/6db13c9b-f852-4d64-9525-bd2d747b4390)
+➡️[Hotel Website Demo](https://github.com/user-attachments/assets/6db13c9b-f852-4d64-9525-bd2d747b4390)
+> **Note:** This project is **not fully responsive**, so the layout may vary on different screen sizes.
+
 ---
 
 ## Features
@@ -26,19 +28,20 @@ You can watch the demo video of the Hotel Reservation Website below:
 - CSS3  
 - JavaScript  
 
-##TR
+#TR
 
 # Otel Rezervasyon Web Sitesi
+
+## Açıklama
+Bu proje, kullanıcıların otel odalarını görüntüleyebileceği, mevcut kampanya ve fırsatları takip edebileceği ve kolayca rezervasyon yapabileceği **web tabanlı** bir otel yönetim sistemidir.
+
+---
 
 ## Demo Video
 Otel Rezervasyon Web Sitesi’nin demo videosunu aşağıdan izleyebilirsiniz:
 
-![Otel Web Sitesi Demo](https://github.com/user-attachments/assets/ae6f2b32-8920-4b04-ba18-66adf6296938)
-
----
-
-## Açıklama
-Bu proje, kullanıcıların otel odalarını görüntüleyebileceği, mevcut kampanya ve fırsatları takip edebileceği ve kolayca rezervasyon yapabileceği **web tabanlı** bir otel yönetim sistemidir.
+➡️[Otel Web Sitesi Demo](https://github.com/user-attachments/assets/ae6f2b32-8920-4b04-ba18-66adf6296938)
+> **Not:** Bu proje **tamamen responsive** olmadığından, farklı ekran boyutlarında görünüm değişebilir.
 
 ---
 
