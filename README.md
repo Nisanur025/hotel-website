@@ -1,5 +1,4 @@
-#EN
-
+# EN
 # Hotel Reservation Website
 
 ## Description
@@ -28,8 +27,7 @@ You can watch the demo video of the Hotel Reservation Website below:
 - CSS3  
 - JavaScript  
 
-#TR
-
+# TR
 # Otel Rezervasyon Web Sitesi
 
 ## Açıklama
