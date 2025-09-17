@@ -1,0 +1,838 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Style Gap :10 */
+.dots,
+.row,
+#groups,
+#guestInfo,
+#guestForm {
+    gap: 10px;
+}
+
+/* Common style Transform :0.5 all ease */
+.slideMenu,
+.slideMenu a,
+.promoCard-content:hover,
+.slider-track {
+    transition: 0.8s all ease;
+}
+
+/* Common Style Padding :10  */
+.slideMenu a,
+.menu,
+#rsvForm-container,
+#groups,
+#guestInfo,
+.card .rsvBtn,
+.submitBtn,
+#rsvInfo,
+#roomInfo,
+.otherGuests,
+.row {
+    padding: 10px;
+}
+
+/* Common Style Display:grid */
+.roomRow,
+#guestForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Common Style Font-size */
+.slideMenu .closebtn,
+.fa-chevron-left,
+.fa-chevron-right,
+.bi-hand-index-thumb,
+#modal .closebtn {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+/* Common Style Color */
+#promoCard,
+#promoCard .promoCard-content,
+.bi-hand-index-thumb,
+#modal .closebtn,
+.review.active-half,
+#rsvForm-container,
+#findRoomBtn,
+.card .rsvBtn,
+.card .bi,
+.card p,
+.card .price,
+.card .star,
+.backLbl,
+.submitBtn,
+#rsvInfo,
+.formGroup label,
+#roomInfo,
+.sameGuest,
+input[type="checkbox"],
+.otherGuests,
+.slideMenu a,
+.slideMenu a:focus,
+.media-container .bi {
+    color: #eeeaea;
+}
+
+/* Common Style Background Color*/
+#promoCard,
+#modal,
+.slideMenu,
+.menu,
+#rsvForm-container,
+#groups,
+#guestInfo,
+#slider-window,
+#groups .card,
+#event-container {
+    background-color: #0000007a;
+}
+
+/* Common Style Border Radius */
+#promoCard,
+.promoCard-content,
+.open-promo-img,
+#roomInfo,
+#rsvInfo,
+#guestForm,
+#groups .card,
+#groups,
+#guestInfo,
+.box,
+.review,
+#slider-window,
+#rsvForm-container,
+#groups .card img,
+#event-container {
+    border-radius: 4%;
+}
+
+/* Common Style Cursor Pointer */
+.dot,
+#findRoomBtn,
+#groups .card:hover,
+.backLbl:hover,
+.submitBtn,
+.fa-chevron-left,
+.fa-chevron-right,
+.promoCard-content {
+    cursor: pointer;
+}
+
+/* Common Style display: Flex */
+.dots,
+.row,
+#groups .card,
+.formGroup,
+.review-slider,
+.slider-track {
+    display: flex;
+}
+
+/* Common Style align items, justify content : Center + display Flex*/
+.snap-section,
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common Style Position: absolute */
+.slideMenu .closebtn,
+.media-container,
+.snap-section img,
+#groups,
+#guestInfo,
+#groups .card h4,
+#groups .card h5,
+#groups .card h6,
+.backLbl,
+#guestForm,
+#rsvInfo,
+#roomInfo,
+.sameGuest,
+.otherGuests,
+.fa-chevron-left,
+.fa-chevron-right,
+#promoCard,
+#modal .closebtn,
+#slider-window,
+.review-slider button {
+    position: absolute;
+}
+
+/* Common Style Left:0 */
+.slideMenu,
+.menu,
+.open-promo-img,
+#modal,
+.left {
+    left: 0;
+}
+
+/* Common Style Text-align :center */
+.slideMenu-content,
+.box,
+.card p,
+#rsvInfo,
+#roomInfo,
+.promoCard-content {
+    text-align: center;
+}
+
+/* HAMBURGER MENU (Hidden) */
+.slideMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 11.9%;
+    backdrop-filter: blur(1px);
+    overflow-x: hidden;
+}
+
+.slideMenu a {
+    text-decoration: none;
+    font-size: 26px;
+    display: block;
+}
+
+.slideMenu a:hover {
+    color: #525f4c;
+}
+
+.slideMenu .closebtn {
+    top: 30px;
+    right: 45px;
+}
+
+.slideMenu-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    z-index: 2000;
+    color: #ffffff;
+}
+
+.media-container {
+    top: 20px;
+    right: 20px;
+}
+
+/* Titles  */
+.title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* Snap */
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.snap-container::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Every page covers the screen*/
+.snap-section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+/* Acts as snap background */
+.snap-section img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Page indicator (dots) */
+.dots {
+    position: fixed;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    z-index: 100;
+}
+
+/* .dot is created in javascript (Class Name)*/
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff80;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: transform .18s, background .18s;
+}
+
+.dot.active {
+    transform: scale(1.45);
+    background: #016b80f2;
+}
+
+/* SCROLLBAR */
+#groups::-webkit-scrollbar,
+#guestInfo::-webkit-scrollbar,
+#promoCard::-webkit-scrollbar {
+    width: 10px;
+}
+
+#groups::-webkit-scrollbar-track,
+#guestInfo::-webkit-scrollbar-track,
+#promoCard::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+#groups::-webkit-scrollbar-thumb,
+#guestInfo::-webkit-scrollbar-thumb,
+#promoCard::-webkit-scrollbar-thumb {
+    background: #13614f;
+    border-radius: 10px;
+}
+
+#groups::-webkit-scrollbar-thumb:hover,
+#guestInfo::-webkit-scrollbar-thumb:hover,
+#promoCard::-webkit-scrollbar-thumb:hover {
+    background: #0e4a3c;
+}
+
+/*-----------
+    PAGE 1 
+-------------*/
+/* Reservation Form Page*/
+#rsvForm-container,
+#groups,
+#guestInfo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#rsvForm-container {
+    visibility: visible;
+    top: 60%;
+    width: 80vh;
+    height: 60vh;
+    border: none;
+}
+
+#rowGroup {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.box {
+    flex: 1;
+    padding: 15px;
+}
+
+#findRoomBtn,
+.card .rsvBtn {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #354b34;
+    border: none;
+    border-radius: 20px;
+}
+
+#findRoomBtn {
+    width: 60%;
+}
+
+#findRoomBtn:hover,
+.card .rsvBtn:hover {
+    background: #525f4c;
+}
+
+input,
+select {
+    width: 100%;
+    height: 60%;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* Choose Your Room Page */
+.detailedPhoto {
+    background-color: transparent;
+    border: 1px dashed #5da65f84;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    padding: 5px;
+    text-align: center;
+}
+
+#groups,
+#guestInfo {
+    visibility: hidden;
+    display: grid !important;
+    top: 60%;
+    width: 80%;
+    height: 70%;
+    grid-template-columns: repeat(1, 1fr);
+    overflow-y: scroll;
+    z-index: 50;
+    border: none;
+}
+
+#groups .card {
+    position: relative;
+    left: 5%;
+    top: 2%;
+    width: 90%;
+    height: 300px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#groups .card:hover {
+    transform: translateY(-8px);
+}
+
+#groups #titleGroups {
+    margin-bottom: 70px !important;
+}
+
+#groups .card h4 {
+    margin: 5px 0;
+    bottom: 35%;
+    left: 10%;
+    color: #8dc6c5;
+}
+
+#groups .card h5 {
+    color: #9b9797;
+    bottom: 20%;
+    left: 5%;
+}
+
+#groups .card h6 {
+    color: rgb(155, 151, 151);
+    bottom: 10%;
+    left: 5%;
+}
+
+#groups .card img {
+    width: 35%;
+    height: 50%;
+}
+
+/* Make reservation Btn */
+.card .rsvBtn {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    top: 15%;
+    left: 60%;
+}
+
+.card p {
+    font-size: 16px;
+    position: relative;
+    top: 8%;
+    left: 20%;
+}
+
+.card .price {
+    font-size: 16px;
+    position: relative;
+    top: 10%;
+    left: 80%;
+}
+
+.card .star {
+    position: relative;
+    top: 20%;
+    left: 40%;
+    font-size: 20px;
+}
+
+.backLbl {
+    font-size: 20px;
+    top: 5%;
+    left: 3%;
+}
+
+.backLbl:hover {
+    color: #13614f;
+}
+
+/* Guest Information Page */
+#guestForm {
+    top: 15%;
+    left: 5%;
+    max-width: 600px;
+    background: #0000004e;
+}
+
+.formGroup {
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.formGroup input {
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.formGroup input:focus {
+    outline: none;
+}
+
+.submitBtn {
+    grid-column: span 2;
+    border: none;
+    border-radius: 8px;
+    background: #354b34;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+    background: #525f4c;
+}
+
+/* Reservation Information Box */
+#rsvInfo {
+    top: 15%;
+    left: 55%;
+    width: 40%;
+    background: #0000004e;
+}
+
+/* Room Information Box*/
+#roomInfo {
+    top: 40%;
+    left: 55%;
+    width: 40%;
+    height: 50%;
+    background: #0000004e;
+}
+
+.sameGuest {
+    top: 70%;
+    left: 5%;
+    font-style: italic;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.otherGuests {
+    width: 90%;
+    height: auto;
+    top: 100%;
+    left: 3%;
+}
+
+/*-----------
+    PAGE 2 
+-------------*/
+
+#promoCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+    width: 93vw;
+    height: 70vh;
+    z-index: 50px;
+    top: 20%;
+    left: 4%;
+    overflow-y: scroll;
+}
+
+.promoCard-content {
+    background-color: #222;
+    padding: 20px;
+    width: 25vw;
+    height: auto;
+    margin: 20px;
+}
+
+.promoCard-content:nth-child(-n+4) {
+    margin-top: 90px;
+}
+
+.promoCard-content:hover {
+    transform: translateY(-10px);
+}
+
+.promoCard-content h4 {
+    font-weight: bold;
+    font-style: italic;
+    color: cadetblue;
+}
+
+.promoCard-content span,
+.events #contact {
+    color: #ffab2e;
+    font-size: 14px;
+}
+
+/* Images Btn Style*/
+.open-promo-img {
+    background-size: cover;
+    width: 20vw;
+    height: 25vh;
+    border: none;
+    position: relative;
+    top: 4%;
+}
+
+.open-promo-img:hover {
+    opacity: 0.5;
+}
+
+.bi-hand-index-thumb {
+    display: none;
+    pointer-events: none;
+}
+
+.open-promo-img:hover .bi-hand-index-thumb {
+    display: block;
+}
+
+/* Clicking on the hand icon and detailed photo lable opens large images */
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 3000;
+}
+
+#modal .closebtn {
+    top: 4%;
+    right: 2%;
+    text-decoration: none;
+}
+
+#modal .fa-chevron-left,
+#modal .fa-chevron-right {
+    top: 45%;
+    color: #ffffff;
+}
+
+.fa-chevron-right {
+    right: 2%;
+}
+
+.fa-chevron-left {
+    left: 2%;
+}
+
+/* Style of images to be opened */
+#modalImages {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modalImages img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-----------
+    PAGE 3 
+-------------*/
+
+.review-slider {
+    position: relative;
+    width: 90vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+#slider-window {
+    overflow: hidden;
+    width: 90%;
+    height: 70%;
+    padding: 20px;
+    left: 5%;
+    top: 20%;
+}
+
+#slider-window .slider-track {
+    position: absolute;
+    top: 21%;
+}
+
+.review {
+    flex: 0 0 auto;
+    width: 27%;
+    margin: 0 10px;
+    height: auto;
+    background: #e8e3e3;
+    text-align: justify;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.review-slider button {
+    border: none;
+    background-color: #ffffff00;
+    top: 50%;
+}
+
+.right {
+    right: 0%;
+}
+
+.review.active-half {
+    background-color: #4d4949a5 !important;
+}
+
+/*-----------
+    PAGE 4 
+-------------*/
+
+#event-container {
+    width: 90vw;
+    height: 83vh;
+    z-index: 1000;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.events {
+    background-color: #000000a4;
+    width: 90%;
+    height: auto;
+    z-index: 1000;
+    position: relative;
+    top: 4%;
+    left: 5%;
+    padding: 25px;
+    color: white;
+    margin-bottom: 2%;
+    border-radius: 10px;
+}
+
+.events h2 {
+    color: #6fa4a6;
+}
+
+#event-container .events:first-of-type {
+    margin-top: 6%;
+}
+
+.events:nth-of-type(2) h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+.events p {
+    text-align: justify;
+    width: 60%;
+    height: 90%;
+}
+
+.events-img {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 30%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    text-align: center;
+}
+
+.round-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #e5b7e8;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform .3s ease, background .3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.round-box i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+.round-box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+}
+
+.round-box:hover {
+    background: #47104b;
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}

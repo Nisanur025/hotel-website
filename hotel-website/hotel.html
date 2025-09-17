@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Nisanur Türkmen">
+    <title>Lakeside Retreat | Home</title>
+    <link rel="stylesheet" type="text/css" href="hotel.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Slide Menu (Hidden) -->
+    <div class="slideMenu" id="leftMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="slideMenu-content">
+            <a href="#">Spa & Wellness</a>
+            <a href="#">Rooms & Suites</a>
+            <a href="#">Dining</a>
+            <a href="#">Local Attractions</a>
+            <a href="#">Testimonials / Reviews</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu" id="hiddenMenu">
+        <!-- Hamburger Icon -->
+        <span style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776;</span>
+        <span style="font-family: 'Times New Roman', Times, serif; font-size: 40px; ">Lakeside Retreat</span>
+
+        <!-- Social Media Links -->
+        <div class="media-container">
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="https://twitter.com" target="_blank" class="text-dark"><i class="bi bi-x-lg"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram"></i></a>
+                <!-- Phone -->
+                <a href="tel:+901234567890" class="text-dark"><i class="bi bi-telephone-fill"></i></a>
+                <!-- Language Selection -->
+                <a href="https://example.com" target="_blank" class="text-dark"><i class="bi bi-globe"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snap : Every snap-section acts like a page-->
+    <div class="snap-container" id="snapContainer">
+
+        <!-- Clicking on the hand icon and detailed photo button opens large images -->
+        <div id="modal">
+            <!-- images open in #modalImages  -->
+            <div id="modalImages"></div>
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeBtn()">&times;</a>
+
+            <span>
+                <i class="fa-solid fa-chevron-right" id="next2"></i>
+            </span>
+            <span>
+                <i class="fa-solid fa-chevron-left" id="prev2"></i>
+            </span>
+        </div>
+
+        <!--RESERVATION PAGE | 1 -->
+        <section class="snap-section" data-index="0">
+            <img src="https://images.pexels.com/photos/629162/pexels-photo-629162.jpeg?_gl=1*5jtm9t*_ga*MTU2NDg5ODIwMC4xNzMxNjAyODIz*_ga_8JE65Q40S6*czE3NTgxMjA1MTMkbzIxJGcxJHQxNzU4MTIwNTE1JGo1OCRsMCRoMA.." alt="page1">
+
+            <!-- Reservation Form -->
+            <div id="rsvForm-container">
+                <form id="rsvForm">
+                    <h1 class="title">Welcome!</h1>
+                    <div id="rowGroup">
+                        <div class="row">
+
+                            <div class="box">
+                                <label>Check In:</label><br>
+                                <input type="date" id="checkInInput" required>
+                            </div>
+
+                            <div class="box">
+                                <label>Check Out:</label><br>
+                                <input type="date" id="checkOutInput" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="box">
+                                <label>Guests:</label><br>
+                                <input type="number" id="guests" min="1" value="1" required>
+                            </div>
+
+                            <div class="box">
+                                <label>Room Type:</label><br>
+                                <select id="roomType" required>
+                                    <option value="Standart">Standart</option>
+                                    <option value="Deluxe">Deluxe</option>
+                                    <option value="Suit">Suit</option>
+                                </select>
+                            </div>
+                            <div class="btn-container">
+                                <button type="submit" id="findRoomBtn">Find Rooms</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Choose Your room -->
+            <div id="groups">
+
+                <label class="backLbl" id="backLbl_in_groups"><i class="bi bi-chevron-double-left"></i>Back</label>
+                <div id="titleGroups">
+                    <h1 class="title"> Choose Your Room...</h1>
+                </div>
+
+                <div class="card" data-name="Room 101">
+                    <img src="https://www.luxury.com.tr/lune-otel-odasi-otel-odasi-mobilyalari-121384-16-B.jpg">
+                    <h4>Standard Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.8</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group7" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“A comfortable and stylish design for a peaceful stay.<br> Everything you need is in one place.”
+                    </p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 102">
+                    <img src="https://www.ekoyapidergisi.org/images/2023/Asortie_Mobilya_otel_1677152973.jpg">
+                    <h4>Deluxe Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group8" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“Designed for spacious living spaces, luxurious<br> details and unforgettable moments with your
+                        family.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per nigth</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 103">
+                    <img src="https://www.ekoyapidergisi.org/images/2023/Asortie_Mobilya_otel_1677152945.jpeg">
+                    <h4>Suite Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group9" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“A unique experience in the heart of the forest. Enhance<br> your enjoyment with a separate
+                        seating area and elegant details.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 104">
+                    <img
+                        src="https://www.fcmobilya.com/upload/slider/2000x2000/otel-odasi-fc-mobilya-3-20200603143741.jpeg">
+                    <h4>Deluxe Family Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group10" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“Spacious living area, luxurious details, and designed<br>for unforgettable moments with your
+                        family.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 105">
+                    <img src="https://www.luxury.com.tr/lune-otel-odasi-otel-odasi-mobilyalari-121384-16-B.jpg">
+                    <h4>Suite Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group11" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“A unique experience in the heart of the forest. Enhance<br>your enjoyment with a separate
+                        seating area and elegant details.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 106">
+                    <img src="https://www.luxury.com.tr/lune-otel-odasi-otel-odasi-mobilyalari-121384-16-B.jpg">
+                    <h4>Standard Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group12" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“A comfortable and stylish design for a peaceful stay.<br> Everything you need is in one place.”
+                    </p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 107">
+                    <img src="https://www.luxury.com.tr/lune-otel-odasi-otel-odasi-mobilyalari-121384-16-B.jpg">
+                    <h4>Standard Family Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group13" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“Spacious and practical area for a comfortable stay with <br>your family. Filled with
+                        child-friendly details.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+                <div class="card" data-name="Room 108">
+                    <img src="https://www.luxury.com.tr/lune-otel-odasi-otel-odasi-mobilyalari-121384-16-B.jpg">
+                    <h4>Deluxe Family Room</h4>
+                    <span class="star"><i class="bi bi-stars"></i>4.9</span>
+                    <h5><i class="bi bi-cup-hot"> All Inclusive</i></h5>
+                    <button data-target="group14" class="detailedPhoto">
+                        <i class="bi bi-search-heart"> Detailed Photos</i>
+                    </button>
+                    <p>“Spacious living area, luxurious details, and designed<br>for unforgettable moments with your
+                        family.”</p>
+                    <br>
+                    <p>Free cancellation · Pay at the hotel</p>
+                    <span class="price">5500₺ | per night</span>
+                    <button class="rsvBtn">Make a Reservation</button>
+                </div>
+
+            </div>
+
+            <!-- Guest Information -->
+            <div id="guestInfo">
+                <h1 class="title">Guest Information</h1>
+
+                <label class="backLbl" id="backLbl_in_guestInfo"><i class="bi bi-chevron-double-left"></i>Back</label>
+
+                <div class="guestDetail">
+
+                    <form id="guestForm">
+                        <div class="formGroup">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+90 5xx xxx xx xx" required>
+                        </div>
+
+                        <button type="submit" class="submitBtn">Continue</button>
+                    </form>
+
+                    <div id="rsvInfo">
+
+                        <label>Your Reservation</label>
+
+                        <div class="rsvRow">
+                            <i class="bi bi-calendar-check" style="font-size: 16px;"></i>
+                            <span>18 Sep 2025</span>
+                            <i class="bi bi-calendar-check"></i>
+                            <span>23 Sep 2025</span>
+                        </div>
+
+                    </div>
+
+                    <div id="roomInfo">
+
+                        <span class="roomName">Deluxe Land View Room</span>
+                        <div class="roomRow">
+                            <span>Breakfast :</span>
+                            <span class="breakfast">Including</span>
+                            <span>Dinner :</span>
+                            <span class="dinner">Including</span>
+                            <span>Guests :</span>
+                            <span class="guests">2 Guests</span>
+                            <span>Room Price :</span>
+                            <span class="price">5.500₺</span>
+                            <span>Total :</span>
+                            <span class="subtotal">11,000₺</span>
+                        </div>
+
+                    </div>
+
+                    <label class="sameGuest">
+                        <input type="checkbox"> Use the same guest detail for other guest information
+                    </label>
+
+                    <div class="otherGuests">
+
+                        <div class="formGroup">
+                            <h5>1. Adult</h5>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required>
+                        </div>
+                        <hr>
+
+                        <div class="formGroup">
+                            <h5>2. Adult</h5>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required>
+                        </div>
+                        <hr>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PACKAGE PAGE | 2 -->
+        <section class="snap-section" data-index="1">
+            <img src="https://images.pexels.com/photos/33760090/pexels-photo-33760090.jpeg" alt="page2">
+
+            <div id="promoCard">
+                <h1 class="title">Holiday Package</h1>
+
+                <div class="promoCard-content">
+                    <h4>Early Booking Discount</h4>
+                    <p>“Book your holiday now & enjoy up to 25% discount! Minimum 3-night stay.”
+                    </p>
+                    <span>“Valid between January 1 – March 31.”</span>
+                    <button class="open-promo-img" data-target="group1"
+                        data-bg="https://cdnturint.touristica.com.tr/otel-resimleri/v1.00/cam-hotel-thermal-resort-spa/500x377/cam-termal-hotel-kizilcahamam-genel_126391.jpg">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+
+                <div class="promoCard-content">
+                    <h4>Weekend Getaway</h4>
+                    <p>“Special spa massage for 2-night stays 50% discount + free breakfast.”</p>
+                    <span>“Valid every Friday – Sunday.”</span>
+                    <button class="open-promo-img" data-target="group2"
+                        data-bg="https://www.kucukoteller.com.tr/storage/images/2024/04/26/8029ad18c903c6244e1b467ad8f62cfbf18ccb5f.webp">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+
+                <div class="promoCard-content">
+                    <h4>Special for Couples</h4>
+                    <p>“Romantic room decoration, wine treat and late check-out opportunity.”</p>
+                    <span>“Valid all year round.”</span>
+                    <button class="open-promo-img" data-target="group3"
+                        data-bg="https://www.shimallhotel.com/admin/uploads/image/balayi/corner.jpg">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+
+                <div class="promoCard-content">
+                    <h4>Family Package</h4>
+                    <p> “Breakfast included for 2 adults + 2 children, free activities for children.”</p>
+                    <span>“Valid between June 15 – September 15.”</span>
+                    <button class="open-promo-img" data-target="group4"
+                        data-bg="https://images.odamax.com/img/1024x768/odamax/image/upload/Abant_Villa_Otel__Bungalow_Alkolsuz_Aile_Oteli_20240214161220_0.jpg">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+
+                <div class="promoCard-content">
+                    <h4>Spa & Wellness Discount</h4>
+                    <p>“Free sauna + 30% spa discount for stays of 3 nights or more.”</p>
+                    <span>“Valid between November 1 – January 31.”</span>
+                    <button class="open-promo-img" data-target="group5"
+                        data-bg="https://etstur.com/letsgo/wp-content/uploads/2021/10/Limak-Yalova-Thermal-Boutique-2.jpg">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+
+                <div class="promoCard-content">
+                    <h4>New Year Special</h4>
+                    <p>“Live music, gala dinner, unlimited drinks and fireworks show.”</p>
+                    <span>“Valid on the night of December 31.”</span>
+                    <button class="open-promo-img" data-target="group6"
+                        data-bg="https://www.eventnews.com.tr/images/haberler/2021/12/hilton1.png">
+                        <i class="bi bi-hand-index-thumb"></i>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- REVIEW PAGE | 3 -->
+        <section class="snap-section" data-index="2">
+            <img src="https://images.pexels.com/photos/5041937/pexels-photo-5041937.jpeg" alt="page3">
+
+            <div class="review-slider">
+
+                <button class="left"><i class="fa-solid fa-chevron-left" style="color:white;"></i></button>
+                <div id="slider-window">
+                    <h1 class="title">Reviews</h1>
+                    <div class="slider-track">
+
+                        <div class="review">
+                            <div class="stars" data-rating="5"></div>
+                            “Waking up to the lake view was amazing. If you’re looking for peace and quiet, this is the
+                            perfect place. Rooms were spotless, and breakfast had plenty of options.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="4"></div>
+                            “The staff was incredibly attentive. Especially the lady at the reception
+                            was very helpful. The pool was a bit small, but overall we had a wonderful time.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="5"></div>
+                            “We came here for a romantic getaway. Watching the sunset by the lake was
+                            unforgettable. We’ll definitely come back again.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="3"></div>
+                            “The hotel was comfortable and the rooms were spacious. The restaurant was a
+                            bit crowded though. Still, a good value for money.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="5"></div>
+                            “The spa services were very professional. After the massage, I felt
+                            completely renewed. I found the peace I was looking for during my holiday here.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="5"></div>
+                            “The staff went above and beyond to make us feel welcome. From the moment we checked in,
+                            everything was smooth and professional. Truly a five-star experience.”
+                        </div>
+
+                        <div class="review">
+                            <div class="stars" data-rating="4"></div>
+                            “The breakfast buffet was outstanding — fresh pastries, fruits, and even local specialties.
+                            It felt like starting each day with a little feast.”
+                        </div>
+
+                    </div>
+                </div>
+                <button class="right"><i class="fa-solid fa-chevron-right" style="color:white;"></i></button>
+            </div>
+
+        </section>
+
+        <!-- EVENTS AND WEDDING PAGE | 4 -->
+        <section class="snap-section" data-index="3">
+            <img src="https://3dduvarkagitlari.com/Content/images/2023/7/14/l/3dduvarkagitlari-5d5a6d6a.jpg"
+                alt="page4">
+
+            <div id="event-container">
+                <h1 class="title">Special Organizations</h1>
+                <div class="events">
+                    <p>We offer the perfection you demand for your most special day. Together, we plan the steps leading
+                        to a lifetime of happiness. The design, food selection, exquisite flavors, professional team,
+                        music, and much more are prepared with uniqueness and perfection, tailored just for you. Your
+                        radiant personality and elegance are reflected in the entire event.
+                    </p>
+                    <span id="contact">Contact us for reservation: 123-XXX-XXXX</span>
+                    <div class="events-img">
+                        <img src="https://www.wyndhamgrandizmir.com/UserFiles/Image/dugun/2.JPG">
+                    </div>
+                </div>
+                <div class="events">
+                    <h2>What We Offer?</h2>
+                    <div class="offer-grid">
+                        <div class="round-box">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Professional Organization</span>
+                        </div>
+                        <div class="round-box">
+                            <i class="fas fa-utensils"></i>
+                            <span>Delicious Catering</span>
+                        </div>
+                        <div class="round-box">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Elegant Decorations</span>
+                        </div>
+                        <div class="round-box">
+                            <i class="fas fa-music"></i>
+                            <span>Live Music & Entertainment</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </section>
+
+    </div>
+
+    <!-- 4 dots on the right-->
+    <div class="dots" id="rigthDots"></div>
+
+    <script src="hotel.js"></script>
+</body>
+
+</html>
